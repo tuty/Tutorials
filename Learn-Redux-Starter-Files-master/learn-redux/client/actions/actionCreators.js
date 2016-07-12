@@ -1,27 +1,27 @@
-/**
- * Created by Ivan_Chervenkov on 7/8/2016.
- */
-//increment
-export const increment = index => ({
+// increment
+export function increment(index) {
+  return {
     type: 'INCREMENT_LIKES',
     index
-});
-
-//add comment
-export const addComment = (postId, author, comment) => {
-    "use strict";
-    return {
-        type: 'ADD_COMMENT',
-        postId,
-        author,
-        comment
-    }
+  }
 }
 
-//remove comment
-export const removeComment = (postId, i) => {
-    return {
-        type: 'REMOVE_COMMENT',
-        i
-    }
+// add comment
+export function addComment(postId, author, comment) {
+  return {
+    type: 'ADD_COMMENT',
+    postId,
+    author,
+    comment
+  }
+}
+
+// remove comment
+
+export function removeComment(postId, i) {
+  return {
+    type: 'REMOVE_COMMENT',
+    i,
+    postId
+  }
 }

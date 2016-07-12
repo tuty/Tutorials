@@ -1,17 +1,13 @@
-/**
- * Created by Ivan_Chervenkov on 7/8/2016.
- */
 import React from 'react';
 
 const Single = React.createClass({
-    render() {
-        "use strict";
-        return (
-            <div className="single-photo">
-                This is a Single Photo
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="single-photo">
+      I'm the single
+      </div>
+    )
+  }
 });
 
 export default Single;

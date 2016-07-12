@@ -1,11 +1,12 @@
-/**
- * Created by Ivan_Chervenkov on 7/8/2016.
- */
-const posts = (state = [], action) => {
-    "use strict";
-    console.log('The post will change');
-    console.log(state, action);
-    return state;
-};
+// a reducer takes in two things:
 
-export  default posts;
+// 1. the action (info about what happened)
+// 2. copy of current state
+
+function posts(state = [], action) {
+  console.log("The post will change");
+  console.log(state, action);
+  return state;
+}
+
+export default posts;
