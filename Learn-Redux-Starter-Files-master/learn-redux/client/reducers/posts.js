@@ -3,6 +3,7 @@
  */
 const posts = (state = [], action) => {
     "use strict";
+    console.log('The post will change');
     console.log(state, action);
     return state;
 };
