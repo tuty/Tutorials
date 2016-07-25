@@ -7,7 +7,6 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 const Photo = React.createClass({
     render() {
-        "use strict";
         const { post, i, comments } = this.props;
         return (
             <figure className="grid-figure">

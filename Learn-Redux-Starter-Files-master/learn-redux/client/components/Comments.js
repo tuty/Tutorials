@@ -25,7 +25,6 @@ const Comments = React.createClass({
     },
 
     handleSubmit(e) {
-        "use strict";
         e.preventDefault();
         console.log(this.refs);
         const { postId } = this.props.params;

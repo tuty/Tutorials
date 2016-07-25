@@ -3,12 +3,14 @@ import React from 'react';
 import { render } from 'react-dom';
 
 // Import css
-import css from './styles/style.styl';
+/*import css from './styles/style.styl';*/
+
 
 // Import Components
 import App from './components/App';
 import Single from './components/Single';
 import PhotoGrid from './components/PhotoGrid';
+import GridListExample from './components/GridList';
 
 // import react router deps
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
@@ -22,21 +24,21 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 /*import Raven from 'raven-js';
-import { sentry_url } from './data/config';
+ import { sentry_url } from './data/config';
 
-Raven.config(sentry_url).install();*/
-
+ Raven.config(sentry_url).install();*/
 
 
 const router = (
-  <Provider store={store}>
-    <Router history={history}>
-      <Route path="/" component={App}>
-        <IndexRoute component={PhotoGrid}></IndexRoute>
-        <Route path="/view/:postId" component={Single}></Route>
-      </Route>
-    </Router>
-  </Provider>
+    <Provider store={store}>
+        <Router history={history}>
+            <Route path="/" component={App}>
+                <IndexRoute component={PhotoGrid}></IndexRoute>
+                <Route path="/view/:postId" component={Single}></Route>
+                <Route path="/grid-list" component={ GridListExample }></Route>
+            </Route>
+        </Router>
+    </Provider>
 )
 
 render(router, document.getElementById('root'));

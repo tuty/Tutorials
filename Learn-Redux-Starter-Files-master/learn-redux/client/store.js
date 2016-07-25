@@ -24,7 +24,6 @@ export const history = syncHistoryWithStore(browserHistory, store);
 
 if(module.hot) {
   module.hot.accept('./reducers/', () => {
-    "use strict";
     const nextRootReducer = require('./reducers/index').default;
     store.replaceReducer(nextRootReducer);
   });
